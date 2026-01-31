@@ -1,20 +1,29 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
-author 'Projekti'
-description 'PROJEKTI - PARKING METER ROBBERY'
-version '1.0.3'
 
-client_scripts {
-    'src/c_*.lua',
-
-}
-
-server_scripts {
-    'src/s_*.lua',
-}
+name 'P_parkingmeterRobbery'
+description 'Enhanced Parking Meter Robbery for QBox'
+author 'ZoniBoy00'
+version '2.0.0'
 
 shared_scripts {
     '@ox_lib/init.lua',
-    'config.lua'
+    'shared/config.lua',
+    'shared/utils.lua'
+}
+
+client_scripts {
+    'client/main.lua'
+}
+
+server_scripts {
+    'server/main.lua'
+}
+
+dependencies {
+    'qbx_core',
+    'ox_lib',
+    'ox_target',
+    'ox_inventory'
 }
